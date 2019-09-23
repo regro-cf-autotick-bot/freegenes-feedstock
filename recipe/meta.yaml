@@ -31,8 +31,10 @@ test:
   imports:
     - freegenes
     - freegenes.main
+    - freegenes.main.twist
     - freegenes.client
     - freegenes.client.shell
+    - freegenes.client.twist
     - freegenes.logger
     - freegenes.logger.message
     - freegenes.logger.spinner
