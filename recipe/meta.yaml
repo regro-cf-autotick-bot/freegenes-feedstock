@@ -39,6 +39,7 @@ test:
     - freegenes.logger.message
     - freegenes.logger.spinner
     - freegenes.tests
+    - freegenes.utils
   commands:
     - freegenes --help
 
