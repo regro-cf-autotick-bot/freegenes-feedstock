@@ -1,5 +1,5 @@
 {% set name = "freegenes" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.12" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58254cc9fcc0081ab3dc87028a9aeb3d092bde9734ef114458642e52e884e8a0
+  sha256: 1a472911fa7d93caac48f737e04fcb39b62ee50fec2569daa634888e829f9bb1
 
 build:
   number: 0
