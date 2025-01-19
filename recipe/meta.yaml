@@ -6,11 +6,11 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: decb49113a48cf33dacc96dda9e4885db5892ce9e24eee70fbcf5e7ec15a7c8f
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - freegenes=freegenes.client:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
@@ -19,15 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
     - setuptools
     - pytest-runner
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests >=2.21.0
     - semver >=2.8.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - freegenes
     - freegenes.main
